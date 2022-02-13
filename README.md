@@ -58,7 +58,7 @@ we use the scopes follows.read users.read tweet.read for OAuth2.
 In order for the Twitter API to request the Endpoint /users/:id/followers (EVEN if it's for our own @AlchemyAnimals Twitter Account), the API needs all three of these scope parameters.
 
 See official OAuth2 Docs (Under Chapter OAuth 2.0 scopes required by this endpoint):
-![Twitter Scope](./docs/images/twitter_scope.png?raw=true)
+![Twitter Scope](./images/twitter_scope.png?raw=true)
 https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/get-users-id-followers
 
 # 3. What Data do we save?
