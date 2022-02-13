@@ -1,0 +1,488 @@
+@font-face {
+  font-family: "KokoroTrial-Bold";
+  src: url("../fonts/KokoroTrial-Bold.otf") format("opentype"),
+  url('../fonts/KokoroTrial-Bold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KokoroTrial-BoldItalic";
+  src: url("../fonts/KokoroTrial-BoldItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KokoroTrial-Heavy";
+  src: url("../fonts/KokoroTrial-Heavy.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KokoroTrial-HeavyItalic";
+  src: url("../fonts/KokoroTrial-HeavyItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KokoroTrial-Italic";
+  src: url("../fonts/KokoroTrial-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KokoroTrial-Regular";
+  src: url("../fonts/KokoroTrial-Regular.otf") format("opentype"),
+  url('../fonts/KokoroTrial-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "KokoroTrial-Regular", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering:optimizeLegibility;
+  font-feature-settings: normal;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: "kern" 1;
+}
+body {
+  background: rgb(20, 20, 20);
+}
+button.button {
+font-family: KokoroTrial-Bold, sans-serif;
+border: 4px solid white;
+font-size: 1.2em;
+font-weight: 500;
+padding: 0.8em 1.7em;
+cursor:pointer;
+transition: background-color 0.5s ease;
+}
+button.button.primary:hover {
+  background-color: lightgrey;
+  transform: zoom(1.5);
+}
+button.button:not(.primary):hover {
+  background-color:rgb(220,220,220);
+  transform: zoom(1.5);
+}
+button.button:not(.primary) {
+  background-color: white;
+  color: black;
+}
+button.button.primary {
+  background: transparent;
+  color: white;
+}
+#sunPink {
+  animation: rotate 3s infinite;
+}
+#sunUp {
+  animation: sunUp 3s forwards;
+}
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  30% {
+      transform: rotate(20deg);
+  }
+  60% {
+      transform: rotate(0deg);
+  }
+}
+@keyframes sunUp {
+  0% {
+      transform: translateY(90%);
+  }
+  100% {
+      transform: translateY(30%);
+  }
+}
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#shooting_stars {
+  height: 100%;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: rotateLong 120s infinite;
+}
+@keyframes rotateLong {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+#sun_bg_mobile {
+  position: absolute;
+  height: 100%;
+}
+#coming_soon {
+  font-family: KokoroTrial-Bold;
+  font-size: 8rem; 
+  color: white
+}
+@media (max-width: 770px) {
+  #coming_soon {
+      font-size: 3rem;
+  }
+  .levelX {
+      width: 95% !important;
+      font-size: 1rem;
+  }
+  #start_logo {
+      width: 90% !important;
+      height: auto;
+  }
+  #lock {
+      width: 50px;
+      height: auto;
+  }
+  #start_finger {
+      top: 3% !important;
+  }
+}
+#start_finger {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+#sunUp {
+  content: url('/static/index/sun_pink.png');
+  &:hover {
+    content: url("/static/dashboard/blue_eclipse.png");
+  }
+}
+.stone {
+  cursor:pointer;
+  &.top_stone:hover {
+    content: url('/static/dashboard/rocks/top_rock.png')
+  }
+  &.middle_stone:hover {
+    content: url('/static/dashboard/rocks/middle_rock.png')
+  }
+  &.bottom_stone:hover {
+    content: url('/static/dashboard/rocks/bottom_rock.png')
+  }
+}
+.animals {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  >* {
+    position: absolute;
+  }
+  .duck_top_left {
+    height: 25%;
+    top: 2%;
+    left: 2%;
+  }
+  .fish_wings_left_middle {
+    height: 10%;
+    top: 25%;
+    left: 2%;
+  }
+  .fish_big_wings {
+    height: 7%;
+    top: 42%;
+  }
+  .fish_wings_left_bottom {
+    height: 20%;
+    top: 53%;
+  }
+  .fish_big_wings_bottom_middle {
+    height: 20%;
+    right: 20%;
+    bottom: 15%;
+  }
+  .fish_wings_top_right {
+    height: 15%;
+    top: 5%;
+    right: 2%;
+  }
+  .fish_wings_right_middle {
+    height: 10%;
+    top: 27%;
+    right: 2%;
+  }
+  .duck_bottom_right {
+    height: 20%;
+    top: 52%;
+    right: 2%;
+  }
+  .bottom {
+    bottom: 2%;
+    width: 100%;
+    right: 2%;
+  }
+}
+@media (max-width: 770px) {
+  .cloud {
+    display: none;
+  }
+}
+// The styles for a `div` element (inserted with JavaScript)
+// Used to make the page scrollable
+// Will be setted a proper `height` value using JavaScript
+.fake-scroll {
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+#roadmap_container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgb(20, 20, 20);
+}
+@media (max-width: 770px) {
+  #animation_container {
+    position: relative !important;
+  }
+}
+#animation_container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  #stars {
+    position: fixed;
+    width: auto;
+    top: 0px;
+    min-width: 100vw;
+    height: 100vh;
+  }
+  .cloud {
+    position: fixed;
+    height: auto;
+    &.center_ {
+      left: 40%;
+      top: 28%;
+      width: 40%;
+    }
+    &.large_left {
+      left: 0;
+      top: 25%;
+      width: 50%;
+    }
+    &.large_right {
+      position: fixed;
+      right: 2%;
+      top: 25%;
+      width: 33%;
+    }
+    &.small_left {
+      left: 5%;
+      width: 30%;
+      top: 28%;
+    }
+    &.small_right {
+      width: 28%;
+      right: 20%;
+      top: 25%;
+    }
+  }
+}
+@keyframes diagonal {
+  0% {background-position: 0% 0%}
+  100% {background-position: 100% 100%}
+}
+
+.colorChange {
+  background-size: 200% 200% !important;
+  background-image: repeating-linear-gradient(
+    to bottom,
+		lightblue 0%,  /* blau */
+		lightgreen 15%, /* grün */
+		purple 30%,  /* rosa */
+		pink 45% /* blau */
+	);
+  animation: diagonal alternate 2s infinite;
+}
+
+
+#trees {
+  >* {
+    position: absolute;
+  }
+  .tree_1 {
+    height: 33%;
+    left: 8%;
+    bottom: 15%;
+  }
+  .tree_3 {
+    height: 30%;
+    left: 2%;
+    top: 30%; 
+  }
+  .tree_2 {
+    height: 30%;
+    left: 20%;
+    top: 10%;
+  }
+  .tree_7 {
+    height: 15%;
+    left: 17%;
+    bottom: 23%;
+  }
+  .tree_9 {
+    height: 15%;
+    left: 30%;
+    bottom: 5%;
+  }
+  .tree_4 {
+    height: 19%;
+    left: 35%;
+    bottom: 25%;
+  }
+  .tree_6 {
+    height: 20%;
+    left: 50%;
+    bottom: 10%;
+  }
+  .tree_8 {
+    height: 29%;
+    bottom: 22%;
+    right: 13%;
+  }
+  .tree_10 {
+    height: 15%;
+    right: 10%;
+    top: 20%;
+  }
+  .tree_11 {
+    height: 15%;
+    right: 14%;
+    top: 20%;
+  }
+  .tree_5 {
+    right: 4%;
+    height: 15%;
+    bottom: 7%;
+  }
+}
+.wiggle {
+  animation: wiggle 0.5s ease;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(20deg);
+  }
+  33% {
+    transform: rotate(-20deg);
+  }
+  66% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+.after_active>h1:after { 
+  animation: scale 1s ease forwards; 
+}
+.after_active>p {
+  animation: fadeIn 1s 1s ease forwards;
+}
+@keyframes scale {
+  0%{
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1; }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+#alchemy {
+  z-index: 1;
+  position: relative;
+  margin: auto;
+  width: fit-content;
+  height: 100px;
+  & .icon_right, & .icon_left {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0%;
+  }
+  & .icon_right {
+    right: 20%;
+  }
+  & .icon_left {
+    left: 20%;
+  }
+  &.dashboard {
+    width: 60%;
+    margin: auto; 
+    top: 50%;
+    transform: translateY(-100%);
+    position: absolute; 
+    z-index: 3;
+  }
+  @media (min-width: 770px) {
+    &:hover .logo {
+      content: url('/static/about_us/THELOGO_BLUE.png');
+    }
+    & .icon_right, & .icon_left {
+      display: none;
+    }
+  }
+  @media (max-width: 770px) {
+    width: 95%;
+    & .logo {
+      position: absolute;
+      width: 90%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+#discord_about_us {
+  cursor: pointer;
+  position: absolute; 
+  bottom: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (min-width: 1500px) {
+    bottom: -100% !important;
+  }
+}

@@ -20,7 +20,7 @@ Our Implementation:
 
 ### 2.1.1 Discord OAuth2 Permissions/Scope
 
-As can be seen in the following code line
+As can be seen in the following line of code
 
 ```
 'scope' => 'identify guilds.members.read'
@@ -44,7 +44,7 @@ Our Implementation:
 
 ### 2.2.1 Twitter OAuth2 Permissions/Scope
 
-As can be seen in the following code line
+As can be seen in the following line of code
 
 ```
 'scope' => 'follows.read users.read tweet.read'
@@ -57,7 +57,8 @@ we use the scopes follows.read users.read tweet.read for OAuth2.
 
 In order for the Twitter API to request the Endpoint /users/:id/followers (EVEN if it's for our own @AlchemyAnimals Twitter Account), the API needs all three of these scope parameters.
 
-Validate this here (Under Chapter OAuth 2.0 scopes required by this endpoint):
+See official OAuth2 Docs (Under Chapter OAuth 2.0 scopes required by this endpoint):
+![Twitter Scope](docs/images/twitter_scope.png?raw=true)
 https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/get-users-id-followers
 
 # 3. What Data do we save?
