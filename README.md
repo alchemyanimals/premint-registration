@@ -2,10 +2,30 @@
 
 This is the unchanged and unfiltered code for the site https://alchemyanimals.art/premint with backend located at https://alchemyanimals.art/backend.
 
-We at Alchemy Animals value Data Privacy and Code Transparency over all. That's why we decided to completely dump the unchanged and unfiltered code for our premint page under MIT license onto Github.
+We at Alchemy Animals value Data Privacy and Code Transparency over all. That's why we decided to completely release the source code used for Premint Registration to github.
 
-This means you are allowed to check and reuse our code for your project!
+Using MIT License means you are allowed to check, modify and reuse our code for your project! We only ask you to kindly refer back to this repository so that it can be maintained and improved.
 
+If there are any improvements or issues please submit a pull request/issue [in this repository.](https://github.com/alchemyanimals/premint)
+
+-----
+
+## Why use a premint solution?
+
+The start of the presale mint era required that developers all over the NFT and Crypto ecosystem need to get a list of wallets that are allowed to use that functionality to mint (buy/obtain) tokens.
+
+This list is then usually used to generate a merkle tree for easy, gas efficient verification in the smart contract.
+
+How can developers get the wallet addresses and verify they should be allowed to access presale?
+
+1) Manually ask everyone. can be thousands of people.. meh
+2) Let everyone register themselves in a sheet or discord? need to copy messages ... meh
+3) Public Document? so you have a CSV? .. verfication .. meh
+4) Using a presale flow that checks Discord Roles and if wanted Twitter Account following the project which guarantees uniqueness and provides a database with all wallet addresses? YES ser!
+
+This is why we built AlchemyAnimals Premint! Due to this requirement. Anyone can simply register and we know it's valid. Database can then be exported to csv or used in any way necessary to build the merkle tree.
+
+![alchemyanimals.art/premint](images/premintPage.png)
 
 # 2. OAuth2 Flow for Discord and Twitter
 
@@ -71,7 +91,7 @@ https://developer.twitter.com/en/docs/twitter-api/users/follows/api-reference/ge
 ```
 /backend/premint/get_session.php
 
-We only save 2 important values:
+We only save the two following important values, no information in regards to your twitter account is stored!
 
 ## 3.1 Your Wallet ID
 
