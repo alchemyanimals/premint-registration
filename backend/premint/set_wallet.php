@@ -3,6 +3,10 @@ session_start();
 include('../lib/connection.php');
 
 // set wallet into php session
+if(strlen($_POST['wallet']) < 2 || !ctype_xdigit(substr($_POST['wallet'], 2))) {
+    echo'{"result":"error", "message":"No funky business please"}';
+    die();
+}
 $_SESSION['wallet_auth'] = $_POST['wallet'];
 // restore discord/twitter from session if available
 $discord = isset($_SESSION['discord_auth']) ? $_SESSION['discord_auth'] : "not available";
